@@ -15,20 +15,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className={styles.header} onClick={() => setReFresh(reFresh?false:true)}>
+        色を変える
+      </header>
+
       <main className={styles.main}>
         {isClient && GenerateAllPalate(100)}
       </main>
 
       <footer className={styles.footer} onClick={() => setReFresh(reFresh?false:true)}>
         色を変える
-        {/* <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a> */}
       </footer>
     </div>
   )
