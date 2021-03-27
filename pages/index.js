@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import HeadComponent from '../components/HeadComponent'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import GenerateAllPalate from '../components/GeneratePalate'
@@ -10,10 +10,7 @@ export default function Home() {
   const isClient = clientOnly();
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadComponent />
 
       <header className={styles.header} onClick={() => setReFresh(reFresh?false:true)}>
         色を変える
